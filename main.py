@@ -30,7 +30,7 @@ secret_role = "weeb"
 @tasks.loop(minutes=1)
 async def weekly_task():
     now = datetime.datetime.now()
-    if now.weekday() == 5 and now.hour == 16 and now.minute == 27:
+    if now.weekday() == 0 and now.hour == 0 and now.minute == 0:
         channel = bot.get_channel(1029836386502725756)
 
         # make fake context to pass in
