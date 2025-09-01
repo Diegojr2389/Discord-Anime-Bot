@@ -13,6 +13,7 @@ import datetime
 
 load_dotenv()
 token = os.getenv('DISCORD_TOKEN')
+channel_id = os.getenv('DISCORD_TOKEN')
 
 # Set up basic logging
 handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
@@ -31,7 +32,7 @@ secret_role = "weeb"
 async def weekly_task():
     now = datetime.datetime.now()
     if now.weekday() == 0 and now.hour == 0 and now.minute == 0:
-        channel = bot.get_channel(1029836386502725756)
+        channel = bot.get_channel(channel_id)
 
         # make fake context to pass in
         ctx = await bot.get_context(
