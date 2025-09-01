@@ -13,7 +13,7 @@ import datetime
 
 load_dotenv()
 token = os.getenv('DISCORD_TOKEN')
-channel_id = os.getenv('DISCORD_TOKEN')
+channel_id = os.getenv('CHANNEL_ID')
 
 # Set up basic logging
 handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
